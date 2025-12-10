@@ -2,7 +2,7 @@ use clap::{Parser, Subcommand};
 use std::path::PathBuf;
 
 #[derive(Parser)]
-#[command(name = "qemu-ga")]
+#[command(name = "qemu-agent")]
 #[command(about = "QEMU Guest Agent CLI tool", long_about = None)]
 pub struct Cli {
     /// VM name

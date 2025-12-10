@@ -22,30 +22,30 @@ cargo install --path .
 
 ```bash
 # Upload a file
-qemu-ga <VM_NAME> upload /path/to/file.txt "C:\\Users\\user\\Documents\\file.txt"
+qemu-agent <VM_NAME> upload /path/to/file.txt "C:\\Users\\user\\Documents\\file.txt"
 
 # Upload a folder (recursive, with progress bar)
-qemu-ga <VM_NAME> upload /path/to/folder "C:\\Users\\user\\Documents\\folder"
+qemu-agent <VM_NAME> upload /path/to/folder "C:\\Users\\user\\Documents\\folder"
 ```
 
 ### Download files/folders from guest
 
 ```bash
 # Download a file
-qemu-ga <VM_NAME> download "C:\\Users\\user\\Documents\\file.txt" ./file.txt
+qemu-agent <VM_NAME> download "C:\\Users\\user\\Documents\\file.txt" ./file.txt
 
 # Download a folder (recursive)
-qemu-ga <VM_NAME> download "C:\\Users\\user\\Documents\\folder" ./folder
+qemu-agent <VM_NAME> download "C:\\Users\\user\\Documents\\folder" ./folder
 ```
 
 ### Clipboard Paste (destination required)
 
 ```bash
 # Copy files/folders or text locally, then paste to a guest path
-qemu-ga <VM_NAME> paste --dest "C:\\Users\\user\\Desktop"
+qemu-agent <VM_NAME> paste --dest "C:\\Users\\user\\Desktop"
 
 # Paste to Linux guests works the same, just use a POSIX path
-qemu-ga <VM_NAME> paste --dest "/home/user/Desktop"
+qemu-agent <VM_NAME> paste --dest "/home/user/Desktop"
 ```
 
 How it works:
@@ -56,22 +56,22 @@ How it works:
 
 ```bash
 # Execute a command and see output
-qemu-ga <VM_NAME> exec cmd.exe /c dir
+qemu-agent <VM_NAME> exec cmd.exe /c dir
 
 # Execute PowerShell commands
-qemu-ga <VM_NAME> exec powershell.exe -Command "Get-Process | Select -First 5"
+qemu-agent <VM_NAME> exec powershell.exe -Command "Get-Process | Select -First 5"
 ```
 
 ## Examples
 
 ### Quick folder transfer
 ```bash
-qemu-ga Win11-Example upload ./my-project "C:\\Users\\user\\Desktop\\my-project"
+qemu-agent Win11-Example upload ./my-project "C:\\Users\\user\\Desktop\\my-project"
 ```
 
 ### Download and verify
 ```bash
-qemu-ga Win11-Example download "C:\\Users\\user\\Documents\\project" ./project-backup
+qemu-agent Win11-Example download "C:\\Users\\user\\Documents\\project" ./project-backup
 ```
 
 ## Technical Details
