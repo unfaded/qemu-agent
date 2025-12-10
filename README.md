@@ -1,4 +1,4 @@
-# qemu-ga - QEMU Guest Agent CLI Tool
+# qemu-agent - QEMU Guest Agent CLI Tool
 
 Rust-based CLI tool for interacting with QEMU/KVM virtual machines through the QEMU Guest Agent protocol. Built for operators who need predictable file transfer, clipboard paste, and remote execution against Windows or Linux guests but primarily with Windows guests in mind.
 
